@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Award, Network, Users } from 'lucide-react';
+import { Award, Download, Users, Star } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -17,19 +17,47 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Connect and Showcase Your <span className="text-medico-blue">Medical Expertise</span>
+              Connect With Doctors <span className="text-medico-blue">Anywhere, Anytime</span>
             </h1>
             <p className="text-lg text-medico-gray">
-              Empowering healthcare professionals to build their professional profiles, showcase achievements, and foster meaningful collaborations across the UK.
+              Download the Medico app to build your professional profile, showcase achievements, and foster meaningful collaborations with UK medical professionals on the go.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#" className="primary-button text-center">
-                Create Your Profile
+              <a href="#" className="primary-button text-center flex items-center justify-center gap-2">
+                <Download className="h-5 w-5" /> Download App
               </a>
               <a href="#features" className="secondary-button text-center">
                 Explore Features
               </a>
             </div>
+            
+            {/* App store buttons */}
+            <div className="flex flex-wrap gap-4 pt-2">
+              <a href="#" className="flex items-center bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                <div className="mr-2">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.36C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.79 1.18-.23 2.32-.94 3.7-.8 1.81.16 3.06.91 3.86 2.41-4.04 2.52-1.19 8.03 2.75 9.57-.78 1.58-1.74 3.16-3.39 4.8ZM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.62-2.96 4.72-3.74 4.25Z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-xs">Download on the</div>
+                  <div className="text-sm font-semibold">App Store</div>
+                </div>
+              </a>
+              <a href="#" className="flex items-center bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                <div className="mr-2">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.293-.707V2.521c0-.265.106-.519.293-.707zM14.5 12.707l2.454 2.454-9.725 5.447 7.271-7.901zm2.454-3.868l-2.454 2.454-7.27-7.901 9.724 5.447zm.271.71l4.653 2.607c.42.235.42.841 0 1.077l-4.653 2.607-2.525-2.525 2.525-2.525z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-xs">GET IT ON</div>
+                  <div className="text-sm font-semibold">Google Play</div>
+                </div>
+              </a>
+            </div>
+            
             <div className="flex flex-wrap gap-6 pt-4">
               <div className="flex items-center">
                 <Users className="h-5 w-5 text-medico-blue mr-2" />
@@ -39,42 +67,37 @@ const Hero = () => {
                 <Award className="h-5 w-5 text-medico-blue mr-2" />
                 <span className="text-sm text-medico-gray">Verified Credentials</span>
               </div>
+              <div className="flex items-center">
+                <Star className="h-5 w-5 text-secondary mr-2" />
+                <span className="text-sm text-medico-gray">4.8 App Rating</span>
+              </div>
             </div>
           </div>
           
           <div className="relative animate-slide-up md:pl-8">
-            {/* Profile Card */}
-            <div className="relative z-10 bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
-              <div className="flex items-start space-x-4 mb-4">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-medico-blue to-accent flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl font-bold">DR</span>
+            {/* Mobile app mockup */}
+            <div className="relative z-10 max-w-xs mx-auto md:mx-0 animate-float">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 blur-xl rounded-3xl"></div>
+                <div className="relative bg-black rounded-[3rem] border-8 border-black overflow-hidden shadow-xl">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-black rounded-b-lg z-10"></div>
+                  <img 
+                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=350&h=700&auto=format&fit=crop&q=80" 
+                    alt="Medico App Interface"
+                    className="w-full h-[550px] object-cover" 
+                  />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Dr. Sarah Mitchell</h3>
-                  <p className="text-medico-gray-light text-sm">Cardiology, Royal London Hospital</p>
-                  <div className="flex items-center mt-2 flex-wrap gap-2">
-                    <span className="text-xs px-2 py-1 bg-accent/10 text-accent rounded-full">FRCP</span>
-                    <span className="text-xs px-2 py-1 bg-secondary/10 text-secondary rounded-full">10+ Publications</span>
-                    <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full">Teaching Lead</span>
+              </div>
+              
+              {/* App features overlay */}
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg glass-effect w-48">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="bg-secondary/20 p-2 rounded-full">
+                    <Users className="h-4 w-4 text-secondary" />
                   </div>
+                  <span className="text-sm font-medium text-medico-blue">Connect Instantly</span>
                 </div>
-              </div>
-              
-              <div className="mt-4 p-4 bg-gray-50 rounded-md border border-gray-100">
-                <p className="text-sm text-medico-gray-light mb-3 font-medium">Research Interests</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-xs px-2 py-1 bg-white border border-gray-200 text-medico-gray rounded-full">Hypertension Management</span>
-                  <span className="text-xs px-2 py-1 bg-white border border-gray-200 text-medico-gray rounded-full">Heart Failure</span>
-                  <span className="text-xs px-2 py-1 bg-white border border-gray-200 text-medico-gray rounded-full">Preventative Cardiology</span>
-                </div>
-              </div>
-              
-              <div className="border-t border-gray-100 pt-4 mt-4">
-                <p className="text-sm text-medico-gray-light mb-3">Recent Collaboration Interest</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-medico-gray">Research on hypertension management in young adults</span>
-                  <button className="text-medico-blue text-sm font-medium hover:text-accent transition-colors">Connect</button>
-                </div>
+                <p className="text-xs text-medico-gray-light">Find and message colleagues anywhere in the UK healthcare system</p>
               </div>
             </div>
             
