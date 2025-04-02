@@ -10,61 +10,60 @@ const Header = () => {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <a href="/" className="flex items-center">
                 <span className="text-medico-blue text-xl font-bold mr-1">Medico</span>
-                <span className="text-medico-purple font-semibold">Connectiverse</span>
               </a>
             </div>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-medico-gray hover:text-medico-blue transition duration-300">
+            <a href="#features" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm">
               Features
             </a>
             <div className="relative">
               <button 
-                className="flex items-center text-medico-gray hover:text-medico-blue transition duration-300"
+                className="flex items-center text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
                 onClick={toggleDropdown}
               >
-                Solutions <ChevronDown className="ml-1 h-4 w-4" />
+                For Doctors <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
-                  <a href="#" className="block px-4 py-2 text-sm text-medico-gray hover:bg-medico-blue hover:text-white">
-                    For Physicians
+                  <a href="#" className="block px-4 py-2 text-sm text-medico-gray hover:bg-gray-50">
+                    Clinical Practice
                   </a>
-                  <a href="#" className="block px-4 py-2 text-sm text-medico-gray hover:bg-medico-blue hover:text-white">
-                    For Hospitals
+                  <a href="#" className="block px-4 py-2 text-sm text-medico-gray hover:bg-gray-50">
+                    Research Collaboration
                   </a>
-                  <a href="#" className="block px-4 py-2 text-sm text-medico-gray hover:bg-medico-blue hover:text-white">
-                    For Researchers
+                  <a href="#" className="block px-4 py-2 text-sm text-medico-gray hover:bg-gray-50">
+                    Career Development
                   </a>
                 </div>
               )}
             </div>
-            <a href="#testimonials" className="text-medico-gray hover:text-medico-blue transition duration-300">
-              Testimonials
+            <a href="#testimonials" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm">
+              Success Stories
             </a>
-            <a href="#" className="text-medico-gray hover:text-medico-blue transition duration-300">
+            <a href="#" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm">
               About
             </a>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="text-medico-blue hover:text-medico-blue/80 font-medium transition duration-300">
-              Log in
+            <a href="#" className="text-medico-blue hover:text-medico-blue/80 font-medium transition duration-300 text-sm">
+              Sign In
             </a>
             <a 
               href="#" 
-              className="primary-button"
+              className="px-4 py-2 rounded-md text-sm font-medium text-white bg-medico-blue hover:bg-medico-blue/90 transition duration-300"
             >
-              Join Medico
+              Create Profile
             </a>
           </div>
           
@@ -91,28 +90,28 @@ const Header = () => {
           <div className="container mx-auto px-4 py-4 space-y-3">
             <a 
               href="#features" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
               onClick={toggleMenu}
             >
               Features
             </a>
             <a 
               href="#" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
               onClick={toggleMenu}
             >
-              Solutions
+              For Doctors
             </a>
             <a 
               href="#testimonials" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
               onClick={toggleMenu}
             >
-              Testimonials
+              Success Stories
             </a>
             <a 
               href="#" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
               onClick={toggleMenu}
             >
               About
@@ -120,17 +119,17 @@ const Header = () => {
             <div className="pt-4 flex flex-col space-y-3">
               <a 
                 href="#" 
-                className="text-medico-blue hover:text-medico-blue/80 font-medium transition duration-300"
+                className="text-medico-blue hover:text-medico-blue/80 font-medium transition duration-300 text-sm"
                 onClick={toggleMenu}
               >
-                Log in
+                Sign In
               </a>
               <a 
                 href="#" 
-                className="primary-button text-center"
+                className="px-4 py-2 rounded-md text-sm font-medium text-white bg-medico-blue hover:bg-medico-blue/90 transition duration-300 text-center"
                 onClick={toggleMenu}
               >
-                Join Medico
+                Create Profile
               </a>
             </div>
           </div>

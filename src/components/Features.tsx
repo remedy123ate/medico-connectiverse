@@ -1,37 +1,37 @@
 
 import React from 'react';
-import { MessageSquare, Users, Calendar, FileText, Activity, Share2 } from 'lucide-react';
+import { BookOpen, Award, Users, MapPin, FileText, MessageSquare } from 'lucide-react';
 
 const featuresData = [
   {
-    icon: <MessageSquare className="h-10 w-10 text-medico-blue" />,
-    title: "Secure Discussions",
-    description: "Exchange ideas and discuss complex cases in a secure, HIPAA-compliant environment exclusive to verified medical professionals."
+    icon: <Award className="h-10 w-10 text-medico-blue" />,
+    title: "Showcase Credentials",
+    description: "Present your qualifications, specialties, and achievements in a professional profile designed specifically for medical professionals."
   },
   {
     icon: <Users className="h-10 w-10 text-medico-blue" />,
-    title: "Global Network",
-    description: "Connect with specialists from around the world, expanding your professional network across borders and specialties."
+    title: "Find Colleagues",
+    description: "Connect with specialists across the UK healthcare system, from your own hospital to institutions throughout the country."
   },
   {
-    icon: <Calendar className="h-10 w-10 text-medico-blue" />,
-    title: "Virtual Events",
-    description: "Participate in virtual conferences, CME opportunities, and expert-led webinars without leaving your practice."
+    icon: <MessageSquare className="h-10 w-10 text-medico-blue" />,
+    title: "Meaningful Networking",
+    description: "Build professional relationships with purpose, addressing the networking gap common in UK medical practice."
   },
   {
     icon: <FileText className="h-10 w-10 text-medico-blue" />,
-    title: "Resource Library",
-    description: "Access a comprehensive library of peer-reviewed research, clinical guidelines, and educational materials."
+    title: "Research Collaboration",
+    description: "Find research partners, co-authors, and mentors to advance your academic and clinical projects."
   },
   {
-    icon: <Activity className="h-10 w-10 text-medico-blue" />,
-    title: "Clinical Insights",
-    description: "Gain valuable perspectives from frontline physicians on treatments, procedures, and patient care strategies."
+    icon: <MapPin className="h-10 w-10 text-medico-blue" />,
+    title: "Local Community",
+    description: "Connect with medical professionals in your region to build a strong local network within the UK healthcare system."
   },
   {
-    icon: <Share2 className="h-10 w-10 text-medico-blue" />,
-    title: "Collaboration Tools",
-    description: "Utilize powerful tools for seamless collaboration on research, publications, and clinical initiatives."
+    icon: <BookOpen className="h-10 w-10 text-medico-blue" />,
+    title: "Publication Showcase",
+    description: "Display your publications, presentations, and case studies to demonstrate your expertise to potential collaborators."
   }
 ];
 
@@ -40,9 +40,9 @@ const Features = () => {
     <section id="features" className="section-padding bg-white">
       <div className="container mx-auto container-padding">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Empowering Healthcare Professionals</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Building Medical Connections</h2>
           <p className="text-medico-gray-light text-lg">
-            Medico Connectiverse offers a comprehensive suite of tools and features designed specifically for medical professionals.
+            Medico bridges the networking gap among UK doctors, providing tools to showcase expertise and foster meaningful professional relationships.
           </p>
         </div>
         
@@ -50,18 +50,18 @@ const Features = () => {
           {featuresData.map((feature, index) => (
             <div 
               key={index} 
-              className="medico-card p-6 flex flex-col h-full"
+              className="bg-white rounded-lg p-6 border border-gray-100 hover:shadow-md transition-shadow duration-300 flex flex-col h-full"
             >
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-medico-gray-light flex-grow">{feature.description}</p>
+              <p className="text-medico-gray-light flex-grow text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
         
         <div className="mt-16 text-center">
           <a href="#" className="primary-button inline-block">
-            Explore All Features
+            Start Building Your Network
           </a>
         </div>
       </div>
