@@ -12,14 +12,14 @@ const benefitsList = [
 
 const CTA = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gray-50">
       <div className="container mx-auto container-padding">
-        <div className="max-w-5xl mx-auto bg-gradient-to-r from-medico-blue to-medico-purple rounded-2xl overflow-hidden shadow-xl">
+        <div className="max-w-5xl mx-auto bg-medico-blue rounded-md overflow-hidden shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12 flex flex-col justify-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Community of Medical Professionals</h2>
               <p className="mb-8 text-white/90">
-                Connect with peers, share knowledge, and advance your practice with Medico Connectiverse.
+                Connect with peers, share knowledge, and advance your practice with Medico.
               </p>
               <div className="space-y-3 mb-8">
                 {benefitsList.map((benefit, index) => (
@@ -35,9 +35,9 @@ const CTA = () => {
                 </a>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-8 md:p-12 flex flex-col justify-center">
-              <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4 text-medico-gray">Create Your Free Account</h3>
+            <div className="bg-white p-8 md:p-12 flex flex-col justify-center">
+              <div className="rounded-md">
+                <h3 className="text-xl font-semibold mb-4 text-medico-blue">Create Your Free Account</h3>
                 <form className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-medico-gray-light mb-1">Full Name</label>
@@ -77,7 +77,7 @@ const CTA = () => {
                     type="submit" 
                     className="w-full primary-button text-center"
                   >
-                    Join Medico Connectiverse
+                    Join Medico
                   </button>
                 </form>
                 <p className="mt-4 text-xs text-medico-gray-light text-center">

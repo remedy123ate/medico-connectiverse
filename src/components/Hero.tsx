@@ -5,24 +5,24 @@ import { Award, Network, Users } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
               Connect and Showcase Your <span className="text-medico-blue">Medical Expertise</span>
             </h1>
             <p className="text-lg text-medico-gray">
-              Empowering healthcare professionals to build their professional profiles, showcase achievements, and foster meaningful collaborations across the UK and beyond.
+              Empowering healthcare professionals to build their professional profiles, showcase achievements, and foster meaningful collaborations across the UK.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#" className="primary-button text-center">
                 Create Your Profile
               </a>
               <a href="#features" className="secondary-button text-center">
-                How It Works
+                Explore Features
               </a>
             </div>
-            <div className="flex space-x-6 pt-4">
+            <div className="flex flex-wrap gap-6 pt-4">
               <div className="flex items-center">
                 <Users className="h-5 w-5 text-medico-blue mr-2" />
                 <span className="text-sm text-medico-gray">10,000+ UK Doctors</span>
@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
           
           <div className="relative animate-slide-up md:pl-8">
-            <div className="relative z-10 bg-white p-6 rounded-xl shadow-md">
+            <div className="relative z-10 bg-white p-6 rounded-md shadow-sm border border-gray-100">
               <div className="flex items-start space-x-4 mb-4">
                 <div className="w-16 h-16 rounded-full bg-medico-blue/10 flex items-center justify-center flex-shrink-0">
                   <span className="text-medico-blue text-xl font-bold">DR</span>

@@ -10,25 +10,25 @@ const Header = () => {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <a href="/" className="flex items-center">
-                <span className="text-medico-blue text-xl font-bold mr-1">Medico</span>
+                <span className="text-medico-blue text-2xl font-bold mr-1">Medico</span>
               </a>
             </div>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm">
+          <nav className="hidden md:flex items-center space-x-10">
+            <a href="#features" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium">
               Features
             </a>
             <div className="relative">
               <button 
-                className="flex items-center text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
+                className="flex items-center text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium"
                 onClick={toggleDropdown}
               >
                 For Doctors <ChevronDown className="ml-1 h-4 w-4" />
@@ -47,10 +47,10 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <a href="#testimonials" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm">
+            <a href="#testimonials" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium">
               Success Stories
             </a>
-            <a href="#" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm">
+            <a href="#" className="text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium">
               About
             </a>
           </nav>
@@ -90,28 +90,28 @@ const Header = () => {
           <div className="container mx-auto px-4 py-4 space-y-3">
             <a 
               href="#features" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium"
               onClick={toggleMenu}
             >
               Features
             </a>
             <a 
               href="#" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium"
               onClick={toggleMenu}
             >
               For Doctors
             </a>
             <a 
               href="#testimonials" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium"
               onClick={toggleMenu}
             >
               Success Stories
             </a>
             <a 
               href="#" 
-              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm"
+              className="block text-medico-gray hover:text-medico-blue transition duration-300 text-sm font-medium"
               onClick={toggleMenu}
             >
               About

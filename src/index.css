@@ -16,13 +16,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 210 79% 51%;
+    --primary: 210 79% 16%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 122 39% 49%;
+    --secondary: 122 39% 38%;
     --secondary-foreground: 210 40% 98%;
 
-    --accent: 262 100% 67%;
+    --accent: 262 100% 36%;
     --accent-foreground: 210 40% 98%;
 
     --muted: 210 40% 96%;
@@ -35,7 +35,7 @@
     --input: 214 32% 91%;
     --ring: 222 47% 11%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
   }
 
   * {
@@ -53,11 +53,11 @@
   }
   
   .medico-card {
-    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
+    @apply bg-white rounded-md shadow-sm hover:shadow-md transition-shadow duration-300;
   }
   
   .medico-button {
-    @apply px-6 py-3 rounded-md font-medium transition-all duration-300;
+    @apply px-5 py-2.5 rounded-md font-medium transition-all duration-300;
   }
   
   .primary-button {
@@ -65,14 +65,27 @@
   }
   
   .secondary-button {
-    @apply medico-button bg-white text-medico-blue border border-medico-blue hover:bg-medico-blue/10;
+    @apply medico-button bg-white text-medico-blue border border-medico-blue hover:bg-medico-blue/5;
   }
   
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-16 md:py-20;
   }
   
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* YPO-inspired styles */
+  .ypo-section-title {
+    @apply text-3xl md:text-4xl font-bold text-medico-blue;
+  }
+  
+  .ypo-section-subtitle {
+    @apply text-lg text-medico-gray-light;
+  }
+  
+  .ypo-card {
+    @apply bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-md transition-all duration-300;
   }
 }

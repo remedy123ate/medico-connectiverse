@@ -63,17 +63,17 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Medico theme colors
+				// Updated Medico theme colors inspired by YPO.org
 				medico: {
-					blue: "#1e88e5",
-					green: "#4caf50",
-					purple: "#8c54ff",
+					blue: "#003057", // Deeper blue like YPO
+					green: "#4B8B3B", // More muted green
+					purple: "#563D7C", // More professional purple
 					gray: {
-						DEFAULT: "#2d3748",
-						light: "#a0aec0",
-						lighter: "#e2e8f0"
+						DEFAULT: "#333333",
+						light: "#6c757d",
+						lighter: "#f8f9fa"
 					},
-					white: "#f7fafc"
+					white: "#ffffff"
 				}
 			},
 			borderRadius: {
