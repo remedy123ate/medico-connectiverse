@@ -1,37 +1,37 @@
 
 import React from 'react';
-import { BookOpen, Award, Users, MapPin, FileText, MessageSquare, Bell, Smartphone, Lightbulb } from 'lucide-react';
+import { BookOpen, Award, Users, MapPin, FileText, MessageSquare, Bell, Smartphone } from 'lucide-react';
 
 const featuresData = [
   {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: "Community Building",
-    description: "Connect with like-minded doctors to break isolation and build a supportive professional network."
+    icon: <Smartphone className="h-10 w-10 text-primary" />,
+    title: "Access Anywhere",
+    description: "Connect with colleagues on the go with our dedicated mobile app, available for both iOS and Android devices."
   },
   {
     icon: <Award className="h-10 w-10 text-accent" />,
-    title: "Knowledge Sharing",
-    description: "Share your expertise and learn from others in a collaborative ecosystem that values diverse perspectives."
+    title: "Showcase Credentials",
+    description: "Present your qualifications, specialties, and achievements in a professional profile designed specifically for medical professionals."
   },
   {
-    icon: <Lightbulb className="h-10 w-10 text-primary" />,
-    title: "Innovation Hub",
-    description: "Participate in discussions that lead to breakthrough improvements in healthcare delivery and practices."
+    icon: <Users className="h-10 w-10 text-primary" />,
+    title: "Find Colleagues",
+    description: "Connect with specialists across the UK healthcare system, from your own hospital to institutions throughout the country."
   },
   {
     icon: <MessageSquare className="h-10 w-10 text-secondary" />,
-    title: "Meaningful Connections",
-    description: "Form relationships that transcend geographical and institutional boundaries across the UK."
+    title: "Secure Messaging",
+    description: "Communicate directly with peers through our secure, GDPR-compliant messaging system designed for healthcare professionals."
   },
   {
     icon: <Bell className="h-10 w-10 text-accent" />,
-    title: "Career Development",
-    description: "Access resources and mentorship opportunities that empower your professional growth journey."
+    title: "Real-time Notifications",
+    description: "Stay updated with instant mobile notifications when colleagues connect, message, or share research opportunities."
   },
   {
     icon: <FileText className="h-10 w-10 text-secondary" />,
-    title: "Collaborative Tools",
-    description: "Utilize purpose-built features that enable seamless collaboration and resource sharing between peers."
+    title: "Offline Access",
+    description: "View saved profiles and documents even without internet connection, perfect for busy hospital environments."
   }
 ];
 
@@ -41,11 +41,11 @@ const Features = () => {
       <div className="container mx-auto container-padding">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-block bg-secondary/10 px-4 py-1 rounded-full mb-2">
-            <span className="text-secondary text-sm font-medium">Building Together</span>
+            <span className="text-secondary text-sm font-medium">Mobile App Features</span>
           </div>
-          <h2 className="ypo-section-title mb-4">Empowering Medical Professionals</h2>
+          <h2 className="ypo-section-title mb-4">Connect Anywhere, Anytime</h2>
           <p className="ypo-section-subtitle">
-            The Medico platform provides the tools and community to help you thrive professionally while delivering exceptional patient care.
+            The Medico mobile app brings networking tools to your pocket, helping UK doctors build meaningful professional relationships wherever they are.
           </p>
         </div>
         
@@ -67,8 +67,8 @@ const Features = () => {
         
         <div className="mt-16 text-center">
           <div className="p-6 md:p-8 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl max-w-3xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4 text-medico-blue">Ready to join our medical community?</h3>
-            <p className="text-medico-gray-light mb-6">Be part of a movement reshaping healthcare collaboration and innovation in the UK.</p>
+            <h3 className="text-2xl font-semibold mb-4 text-medico-blue">Ready to connect with colleagues on the go?</h3>
+            <p className="text-medico-gray-light mb-6">Join thousands of UK medical professionals who are networking through our mobile app.</p>
             <a href="#" className="primary-button inline-flex items-center justify-center gap-2">
               <Smartphone className="h-5 w-5" />
               Download the App
