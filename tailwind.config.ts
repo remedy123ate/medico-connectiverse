@@ -68,8 +68,6 @@ export default {
 					blue: "#003057", // Deeper blue like YPO
 					green: "#4B8B3B", // More muted green
 					purple: "#563D7C", // More professional purple
-					teal: "#08979C", // Added teal for accents
-					gold: "#DCAC4B", // Added gold for premium feel
 					gray: {
 						DEFAULT: "#333333",
 						light: "#6c757d",
@@ -107,25 +105,16 @@ export default {
 				'slide-up': {
 					'0%': { transform: 'translateY(20px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
-				},
-				'pulse-subtle': {
-					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.85' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
-				'slide-up': 'slide-up 0.5s ease-out',
-				'pulse-subtle': 'pulse-subtle 3s infinite'
+				'slide-up': 'slide-up 0.5s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				playfair: ['Playfair Display', 'serif']
-			},
-			backgroundImage: {
-				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				sans: ['Inter', 'sans-serif']
 			}
 		}
 	},
