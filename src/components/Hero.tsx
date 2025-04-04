@@ -13,22 +13,22 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in relative z-10">
             <div className="inline-block bg-accent/10 px-4 py-1 rounded-full mb-2">
-              <span className="text-accent text-sm font-medium">UK Medical Professionals Network</span>
+              <span className="text-accent text-sm font-medium">Breaking Down Medical Silos</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Connect With Doctors <span className="text-medico-blue">Anywhere, Anytime</span>
+              We're Stronger <span className="text-medico-blue">When Connected</span>
             </h1>
             <p className="text-lg text-medico-gray">
-              Download the Medico app to build your professional profile, showcase achievements, and foster meaningful collaborations with UK medical professionals on the go.
+              Download the Medico app to join a vibrant community of UK medical professionals dedicated to collaboration, innovation, and mutual support.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#" className="primary-button text-center flex items-center justify-center gap-2">
-                <Download className="h-5 w-5" /> Download App
+                <Download className="h-5 w-5" /> Join the Movement
               </a>
               <a href="#features" className="secondary-button text-center">
-                Explore Features
+                Explore Network
               </a>
             </div>
             
@@ -90,14 +90,14 @@ const Hero = () => {
               </div>
               
               {/* App features overlay */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg glass-effect w-48">
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg glass-effect w-56">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="bg-secondary/20 p-2 rounded-full">
-                    <Users className="h-4 w-4 text-secondary" />
+                  <div className="bg-accent/20 p-2 rounded-full">
+                    <Users className="h-4 w-4 text-accent" />
                   </div>
-                  <span className="text-sm font-medium text-medico-blue">Connect Instantly</span>
+                  <span className="text-sm font-medium text-medico-blue">Breaking Isolation</span>
                 </div>
-                <p className="text-xs text-medico-gray-light">Find and message colleagues anywhere in the UK healthcare system</p>
+                <p className="text-xs text-medico-gray-light">Join a vibrant community of healthcare innovators ready to collaborate and support each other</p>
               </div>
             </div>
             
