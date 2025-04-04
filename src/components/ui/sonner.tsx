@@ -1,10 +1,12 @@
-import { useTheme } from "next-themes"
-import { Toaster as Sonner } from "sonner"
 
-type ToasterProps = React.ComponentProps<typeof Sonner>
+import { Toaster as Sonner } from "sonner";
+import type { FC } from "react";
 
-const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme()
+type ToasterProps = React.ComponentProps<typeof Sonner>;
+
+const Toaster: FC<ToasterProps> = ({ ...props }) => {
+  // Removed the useTheme hook that might be causing issues
+  const theme = "light"; // Defaulting to light theme
 
   return (
     <Sonner
@@ -23,7 +25,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       }}
       {...props}
     />
-  )
-}
+  );
+};
 
-export { Toaster }
+export { Toaster };
