@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -43,7 +43,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans scroll-smooth;
   }
 }
 
@@ -61,15 +61,15 @@
   }
   
   .primary-button {
-    @apply medico-button bg-medico-blue text-white hover:bg-medico-blue/90;
+    @apply medico-button bg-gradient-to-r from-medico-blue/90 to-accent/90 text-white hover:from-medico-blue hover:to-accent shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0;
   }
   
   .secondary-button {
-    @apply medico-button bg-white text-medico-blue border border-medico-blue hover:bg-medico-blue/5;
+    @apply medico-button bg-white/90 text-medico-blue border border-medico-blue/20 shadow-sm hover:bg-medico-blue/5 hover:shadow-md transform hover:-translate-y-0.5 active:translate-y-0;
   }
   
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
   }
   
   .container-padding {
@@ -78,15 +78,15 @@
 
   /* YPO-inspired styles */
   .ypo-section-title {
-    @apply text-3xl md:text-4xl font-bold text-medico-blue;
+    @apply text-3xl md:text-4xl font-bold text-medico-blue font-playfair leading-tight;
   }
   
   .ypo-section-subtitle {
-    @apply text-lg text-medico-gray-light;
+    @apply text-lg text-medico-gray-light leading-relaxed;
   }
   
   .ypo-card {
-    @apply bg-white border border-gray-100 rounded-lg shadow-sm transition-all duration-300;
+    @apply bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1;
   }
 
   /* Enhanced visual elements */
@@ -107,11 +107,19 @@
   }
 
   .soft-shadow {
-    @apply shadow-[0_4px_20px_-5px_rgba(0,0,0,0.1)];
+    @apply shadow-[0_8px_30px_-5px_rgba(0,0,0,0.1)];
   }
   
   .glass-effect {
-    @apply backdrop-blur-md bg-white/70;
+    @apply backdrop-blur-lg bg-white/70 border border-white/20;
+  }
+
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .app-store-button {
+    @apply flex items-center bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0;
   }
 }
 
@@ -121,7 +129,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
   100% {
     transform: translateY(0px);
@@ -129,7 +137,7 @@
 }
 
 .animate-float {
-  animation: float 4s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 @keyframes pulse-subtle {
@@ -143,4 +151,93 @@
 
 .animate-pulse-subtle {
   animation: pulse-subtle 3s infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
+
+.blur-circle {
+  @apply absolute rounded-full filter blur-[50px] opacity-50;
+}
+
+/* Playfair Display for headers */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
 }
