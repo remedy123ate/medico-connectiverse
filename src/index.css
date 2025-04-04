@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -46,10 +45,6 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
-  }
 }
 
 @layer components {
@@ -71,10 +66,6 @@
   
   .secondary-button {
     @apply medico-button bg-white text-medico-blue border border-medico-blue hover:bg-medico-blue/5;
-  }
-  
-  .hope-button {
-    @apply medico-button bg-gradient-to-r from-medico-blue to-medico-hope text-white hover:opacity-90;
   }
   
   .section-padding {
@@ -100,19 +91,19 @@
 
   /* Enhanced visual elements */
   .gradient-text {
-    @apply bg-gradient-to-r from-medico-blue to-medico-hope bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-medico-blue to-accent bg-clip-text text-transparent;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-medico-blue to-medico-hope;
+    @apply bg-gradient-to-r from-primary to-accent;
   }
   
   .gradient-border {
-    @apply border border-transparent bg-gradient-to-r from-medico-blue to-medico-hope rounded-lg p-[1px];
+    @apply border border-transparent bg-gradient-to-r from-primary to-accent rounded-lg p-[1px];
   }
   
   .highlighted-card {
-    @apply border-l-4 border-medico-hope;
+    @apply border-l-4 border-accent;
   }
 
   .soft-shadow {
@@ -121,32 +112,6 @@
   
   .glass-effect {
     @apply backdrop-blur-md bg-white/70;
-  }
-
-  /* Hope-focused elements */
-  .hope-card {
-    @apply border-l-4 border-medico-hope bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300;
-  }
-  
-  .inspire-badge {
-    @apply bg-medico-inspire text-medico-blue text-xs font-medium px-2.5 py-0.5 rounded-full;
-  }
-  
-  .testimonial-card {
-    @apply bg-white p-6 rounded-lg border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300;
-  }
-
-  /* Animated elements */
-  .animated-border {
-    @apply relative before:absolute before:inset-0 before:rounded-lg before:p-[1px] before:bg-gradient-to-r before:from-medico-blue before:to-medico-hope before:animate-gradient-x;
-  }
-  
-  .floating-element {
-    @apply animate-float;
-  }
-  
-  .glowing-element {
-    @apply animate-glow;
   }
 }
 
@@ -178,45 +143,4 @@
 
 .animate-pulse-subtle {
   animation: pulse-subtle 3s infinite;
-}
-
-/* Typography enhancements */
-.playfair {
-  font-family: 'Playfair Display', serif;
-}
-
-.heading-accent {
-  @apply playfair text-medico-blue;
-}
-
-.inspirational-quote {
-  @apply playfair italic text-medico-gray-light;
-}
-
-/* Responsive image handling */
-.responsive-image {
-  @apply w-full h-full object-cover;
-}
-
-/* Story link with animation */
-.story-link {
-  @apply relative inline-block text-medico-blue hover:text-medico-hope transition-colors;
-}
-
-.story-link:after {
-  content: '';
-  @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-medico-hope origin-bottom-right transition-transform duration-300;
-}
-
-.story-link:hover:after {
-  @apply scale-x-100 origin-bottom-left;
-}
-
-/* Highlight card on hover */
-.highlight-hover {
-  @apply transition-all duration-300;
-}
-
-.highlight-hover:hover {
-  @apply border-medico-hope;
 }
