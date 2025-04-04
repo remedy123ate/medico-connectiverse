@@ -63,9 +63,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated Medico theme colors inspired by YPO.org
+				// Updated Medico theme colors with the new blue color
 				medico: {
-					blue: "#003057", // Deeper blue like YPO
+					blue: "#02033B", // Updated from "#003057" to "#02033B"
 					green: "#4B8B3B", // More muted green
 					purple: "#563D7C", // More professional purple
 					gray: {
