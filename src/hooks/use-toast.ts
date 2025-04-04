@@ -1,6 +1,5 @@
 
-// This is a basic implementation since we can't modify the original
-
+// A simplified implementation to avoid React hooks issues
 import { toast } from "sonner";
 
 export const useToast = () => {

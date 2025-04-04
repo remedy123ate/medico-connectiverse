@@ -8,5 +8,6 @@ import './index.css';
 const rootElement = document.getElementById("root");
 if (!rootElement) throw new Error("Failed to find the root element");
 
-// Create root and render app
+// Create root and render app without StrictMode for better compatibility
+// with Tanstack React Query
 createRoot(rootElement).render(<App />);

@@ -5,12 +5,10 @@ import type { FC } from "react";
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
 const Toaster: FC<ToasterProps> = ({ ...props }) => {
-  // Removed the useTheme hook that might be causing issues
-  const theme = "light"; // Defaulting to light theme
-
+  // Simplified component to avoid hooks issues
   return (
     <Sonner
-      theme={theme as ToasterProps["theme"]}
+      theme="light"
       className="toaster group"
       toastOptions={{
         classNames: {
